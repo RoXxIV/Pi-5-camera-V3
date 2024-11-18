@@ -1,0 +1,33 @@
+# Fichiers compil�s Python
+__pycache__/
+*.py[cod]
+
+# Environnement virtuel
+venv/
+
+# Fichiers de logs
+*.log
+app.log
+
+# Fichiers temporaires
+*.tmp
+*.swp
+*.bak
+*.lgd-nfy*
+
+# Dossier contenant les photos captur�es (exclure si les photos ne doivent pas �tre versionn�es)
+photos/
+
+# Fichiers de configuration sp�cifiques � un IDE
+.vscode/
+.idea/
+
+# Syst�me d'exploitation
+.DS_Store               # macOS
+Thumbs.db               # Windows
+
+# Fichiers g�n�r�s par Python ou autres outils
+*.egg-info/
+*.pyo
+*.pyd
+*.so

@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Custom webcam
+Comment=webcam 
+Exec=/home/roxx/Desktop/projet_webcam/open_app.sh
+Icon=icon_picam
+Terminal=true
+Type=Application
+Categories=Utility;
