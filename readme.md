@@ -1,45 +1,45 @@
 
 # Projet Webcam avec Raspberry Pi
 
-Ce projet permet de contr�ler une cam�ra module v3 connect�e � un Raspberry Pi 5 via une interface graphique d�velopp�e avec **CustomTkinter**. Il inclut �galement la gestion d'un bouton GPIO pour capturer des photos.
+Ce projet permet de controler une caméra module v3 connectée a un Raspberry Pi 5 via une interface graphique développée avec **CustomTkinter**. Il inclut également la gestion d'un bouton GPIO pour capturer des photos.
 
 ---
 
-## Fonctionnalit�s
+## Fonctionnalités
 
 - **Capture de photos :**
   - Depuis l'interface graphique.
-  - En appuyant sur un bouton physique connect� au GPIO.
-- **Pr�visualisation en direct :**
-  - Une fen�tre s�par�e affiche le flux vid�o en direct.
+  - En appuyant sur un bouton physique connecté au GPIO.
+- **Prévisualisation en direct :**
+  - Une fenétre séparée affiche le flux vidéo en direct.
 - **Enregistrement des photos :**
-  - Les photos captur�es sont automatiquement enregistr�es dans un dossier d�di�.
+  - Les photos capturées sont automatiquement enregistrées dans un dossier dédié.
 
 ---
 projet_webcam/ 
-+-- main.py # Point d'entr�e principal 
-+-- camera.py # Gestion de la cam�ra (capture, preview, arr�t) 
++-- main.py # Point d'entrée principal 
++-- camera.py # Gestion de la caméra (capture, preview, arrét) 
 +-- gpio_handler.py # Gestion du bouton GPIO 
 +-- gui.py # Interface graphique avec CustomTkinter 
-+-- open_app.sh # Script de lancement automatis� 
-+-- photos/ # Dossier pour les photos captur�es 
-+-- app.log # Fichier de logs pour d�bogage (cr�� automatiquement) 
++-- open_app.sh # Script de lancement automatisé 
++-- photos/ # Dossier pour les photos capturées 
++-- app.log # Fichier de logs pour débogage (créé automatiquement) 
 +-- README.md # Documentation du projet
 
 
 ---
 
-## Pr�requis
+## Prérequis
 
-1. **Mat�riel :**
-   - Raspberry Pi avec une cam�ra compatible (e.g., cam�ra officielle Raspberry Pi).
-   - Un bouton connect� au GPIO 24 et au GND.
+1. **Matériel :**
+   - Raspberry Pi avec une caméra compatible (e.g., caméra officielle Raspberry Pi).
+   - Un bouton connecté au GPIO 24 et au GND.
 
 2. **Logiciels :**
    - Raspberry Pi OS
-   - Python 3.7 ou plus r�cent.
+   - Python 3.7 ou plus récent.
 
-3. **Biblioth�ques Python :**
+3. **Bibliothèques Python :**
    - `customtkinter`
    - `gpiozero`
    - `picamera2`
@@ -53,25 +53,25 @@ projet_webcam/
    git clone https://github.com/votre-utilisateur/projet_webcam.git
    cd projet_webcam
    
-2. **Rendre le script ex�cutable :**
+2. **Rendre le script exécutable :**
 	```bash
 	 chmod +x open_app.sh
-3. **Rendre le script ex�cutable :** 
+3. **Rendre le script exécutable :** 
 	```bash
 	./open_app.sh
 ## Utilisation
--   **D�marrer l'application :**
+-   **Démarrer l'application :**
     
     -   Lancez le script `open_app.sh`.
--   **Fonctionnalit�s disponibles :**
+-   **Fonctionnalités disponibles :**
     
     -   **Bouton dans l'interface :** Cliquez sur "Prendre une photo" pour capturer une photo.
-    -   **Bouton physique :** Appuyez sur le bouton connect� au GPIO 24 pour capturer une photo.
-    -   Les photos seront enregistr�es dans le dossier `photos/`.
+    -   **Bouton physique :** Appuyez sur le bouton connecté au GPIO 24 pour capturer une photo.
+    -   Les photos seront enregistrées dans le dossier `photos/`.
     
-    ## D�bogage
--   Les logs d'ex�cution sont disponibles dans le fichier `app.log`.
--   Si le script se ferme imm�diatement, lancez-le sans redirection pour voir les erreurs :
+    ## Débogage
+-   Les logs d'exécution sont disponibles dans le fichier `app.log`.
+-   Si le script se ferme immédiatement, lancez-le sans redirection pour voir les erreurs :
 ```bash
 ./open_app.sh
 ```
