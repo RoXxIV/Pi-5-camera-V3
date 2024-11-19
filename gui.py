@@ -20,17 +20,19 @@ class CameraApp(ctk.CTk):
         self.photo_button.pack(pady=10)
 
         # slider
-        self.slider_label = ctk.CTkLabel(self, text="Réglage inutile pour l'instant")
-        self.slider_label.pack(pady=10)
+        self.slider_label = ctk.CTkLabel(self, text="lens")
+        self.slider_label.pack(pady=5)
 
-        self.slider = ctk.CTkSlider(self, from_=0, to=100, command=self.slider_event)
-        self.slider.pack(pady=10)
+        self.slider = ctk.CTkSlider(self, from_=0.00, to=10.0, command=self.slider_event)
+        self.slider.pack(pady=5)
 
         # Bouton arréter
         self.exit_button = ctk.CTkButton(self, text="éteindre", command=self.stop_app)
         self.exit_button.pack(pady=10)
 
     def slider_event(self, value):
+        # mise a jour du lens
+        self.camera.set_lens(value)
         print(f"Valeur du slider : {value}")
 
     def stop_app(self):

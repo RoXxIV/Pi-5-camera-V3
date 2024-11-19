@@ -1,4 +1,5 @@
 from picamera2 import Picamera2, Preview
+from libcamera import controls
 from datetime import datetime
 import os
 
@@ -40,3 +41,17 @@ class Camera:
             return file_path
         except Exception as e:
             print(f"Erreur lors de la capture : {e}")
+
+    def set_lens(self,position):
+        try:
+            # Vérifie si les controles de la cam sont disponibles
+            if not self.picam2.camera_controls:
+                print("Les controles de la caméra ne sont pas disponibles. Vérifiez l'état de la caméra.")
+                return
+            self.picam2.set_controls({
+                "AfMode": controls.AfModeEnum.Manual,
+                "LensPosition": position
+            })
+            print(f"Position de la lentille réglée a : {position}")
+        except Exception as e:
+            print(f"Erreur lors du réglage de la position de la lentille : {e}")
